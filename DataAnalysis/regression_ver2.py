@@ -1,4 +1,4 @@
-# regression_ver1.py (version 2)
+# regression_ver2.py (version 2)
 # Max Kim
 #
 # Takes data and an expected trend. Generates a polynomial
