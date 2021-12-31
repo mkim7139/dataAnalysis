@@ -1,4 +1,4 @@
-# powerRule_ver1.py (version 2)
+# powerRule_ver3.py (version 3)
 # Max Kim
 # , 2021
 # Takes polynomial as input and converts to derivative
