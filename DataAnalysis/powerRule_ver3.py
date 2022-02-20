@@ -4,6 +4,8 @@
 # Takes polynomial as input and converts to derivative
 # through power rule and string analysis
 
+
+
 # takes a polynomial expression as a string and a variable value
 # returns derivative at specified variable value
 def derive(raw, var):
@@ -19,7 +21,10 @@ def create_list(line):
     list=[]
     for i in range(len(line)):
         if i==0:  # asumes first item in list will be number
-            list.append(line[i])
+            if isFloat(line[i]):
+                list.append(line[i])
+            else:
+                list.append('1')
         elif (isFloat(line[i]) or line[i]=='.') and (isFloat(line[i-1]) or line[i-1]=='.' or line[i-1]=='-'): #condenses numbers, decimals, and signs
             list[-1]+=line[i]
         elif isFloat(line[i]):
@@ -68,4 +73,4 @@ def listToExpression(var, list):
     return expression
 
 # test
-# derive('2x^3 -3.2x^(-4)', 2)
+# derive('x^3 -1x^(-4)', 2)
